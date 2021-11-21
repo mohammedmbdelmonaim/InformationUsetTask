@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/user_nav_graph.xml"
+    app:startDestination="@id/myProfileFragment">
+
+    <fragment
+        android:id="@+id/myProfileFragment"
+        android:name="com.mywork.informationusettask.ui.user.proifle.MyProfileFragment"
+        android:label="MyProfileFragment" />
+    <fragment
+        android:id="@+id/allUsersFragment"
+        android:name="com.mywork.informationusettask.ui.user.all.AllUsersFragment"
+        android:label="AllUsersFragment" />
+</navigation>

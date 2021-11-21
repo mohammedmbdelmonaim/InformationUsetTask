@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">InformationUserApp</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="phone_number">enter phone number</string>
+    <string name="password">enter password</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="name">username</string>
+    <string name="country">Country</string>
+    <string name="city">city</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="admin">Admin</string>
+    <string name="en">EN</string>
+    <string name="ar">AR</string>
+    <string name="address">Address</string>
+    <string name="edit">Edit Profile</string>
+    <string name="logout">Logout</string>
+    <string name="my_profile">My Profile</string>
+    <string name="edit_success">user edited successfully</string>
+    <string name="please_name">please enter the name</string>
+    <string name="at_least_3_chars">Must have at least 3 characters</string>
+    <string name="please_phone">please enter the phone</string>
+    <string name="valid_phone">please enter valid phone number</string>
+    <string name="enter_pass">please enter the address</string>
+    <string name="enter_country">please enter the country</string>
+    <string name="nter_city">please enter the city</string>
+    <string name="enter_address">please enter the address</string>
+    <string name="at_least_6_chars">Must have at least 6 characters</string>
+    <string name="choose_gender">please choose the gender</string>
+    <string name="hello">hello</string>
+    <string name="added_success">user added successfully</string>
+    <string name="verify_data">please verify the data entered</string>
+    <string name="phone">phone number</string>
+    <string name="gender">gender</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="users">Users</string>
+    <string name="delete_user">delete user successfully by admin</string>
+</resources>

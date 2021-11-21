@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="user"
+            type="com.mywork.informationusettask.model.entity.User" />
+        <variable
+            name="isAdmin"
+            type="Boolean" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_16dp"
+        android:layout_marginStart="@dimen/dimen_16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="@dimen/dimen_8dp"
+        app:strokeWidth="@dimen/dimen_1dp"
+        app:strokeColor="@color/teal_200">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/dimen_16dp"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/delete_user"
+                style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/dimen_8dp"
+                android:visibility="@{isAdmin ? View.VISIBLE : View.GONE}"
+                app:strokeWidth="0dp"
+                app:icon="@drawable/ic_baseline_delete_24"
+                app:iconTint="#FA1818"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+               />
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textSize="16sp"
+                android:fontFamily="@font/cairo_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{user.name}"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/cairo_bold"
+                app:layout_constraintStart_toEndOf="@+id/txt_name"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/teal_200" />
+
+            <TextView
+                android:id="@+id/txt_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phone"
+                android:textSize="16sp"
+                android:fontFamily="@font/cairo_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_name"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{user.phone}"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/cairo_bold"
+                app:layout_constraintStart_toEndOf="@+id/txt_phone"
+                app:layout_constraintTop_toBottomOf="@+id/txt_name"
+                android:textColor="@color/teal_200" />
+
+            <TextView
+                android:id="@+id/txt_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/address"
+                android:textSize="16sp"
+                android:fontFamily="@font/cairo_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_phone"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{user.address}"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/cairo_bold"
+                app:layout_constraintStart_toEndOf="@+id/txt_address"
+                app:layout_constraintTop_toBottomOf="@+id/txt_phone"
+                android:textColor="@color/teal_200" />
+
+            <TextView
+                android:id="@+id/txt_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/country"
+                android:textSize="16sp"
+                android:fontFamily="@font/cairo_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_address"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txt_country_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{user.country}"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp"
+                tools:text= "Menia"
+                android:fontFamily="@font/cairo_bold"
+                app:layout_constraintStart_toEndOf="@+id/txt_country"
+                app:layout_constraintTop_toBottomOf="@+id/txt_address"
+                android:textColor="@color/teal_200" />
+
+            <TextView
+                android:id="@+id/txt_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/city"
+                android:textSize="16sp"
+                android:layout_marginStart="25dp"
+                android:fontFamily="@font/cairo_bold"
+                app:layout_constraintStart_toEndOf="@+id/txt_country_value"
+                app:layout_constraintTop_toBottomOf="@+id/txt_address"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{user.city}"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/cairo_bold"
+                tools:text= "Menia"
+                app:layout_constraintStart_toEndOf="@+id/txt_city"
+                app:layout_constraintTop_toBottomOf="@+id/txt_address"
+                android:textColor="@color/teal_200" />
+
+            <TextView
+                android:id="@+id/gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gender"
+                android:textSize="16sp"
+                android:fontFamily="@font/cairo_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_city"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{user.genderId == 0 ? @string/male: @string/female}"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/cairo_bold"
+                tools:text= "Menia"
+                app:layout_constraintStart_toEndOf="@+id/gender"
+                app:layout_constraintTop_toBottomOf="@+id/txt_city"
+                android:textColor="@color/teal_200" />
+
+            <TextView
+                android:id="@+id/admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/admin"
+                android:textSize="16sp"
+                android:fontFamily="@font/cairo_bold"
+                app:layout_constraintStart_toStartOf="@id/txt_city"
+                app:layout_constraintTop_toBottomOf="@+id/txt_city"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{user.admin ? @string/yes: @string/no}"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/cairo_bold"
+                tools:text= "Menia"
+                app:layout_constraintStart_toEndOf="@+id/admin"
+                app:layout_constraintTop_toBottomOf="@+id/txt_city"
+                android:textColor="@color/teal_200" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

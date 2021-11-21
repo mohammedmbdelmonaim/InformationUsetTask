@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="user"
+            type="com.mywork.informationusettask.model.entity.User" />
+    </data>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#173A37">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_layout_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:theme="@style/TextLabel"
+            app:boxCornerRadiusBottomEnd="@dimen/dimen_6dp"
+            app:boxCornerRadiusBottomStart="@dimen/dimen_6dp"
+            app:boxCornerRadiusTopEnd="@dimen/dimen_6dp"
+            app:boxCornerRadiusTopStart="@dimen/dimen_6dp"
+            app:boxStrokeColor="@color/teal_200"
+            app:boxStrokeWidth="@dimen/dimen_1dp"
+            app:boxStrokeWidthFocused="@dimen/dimen_2dp"
+            app:endIconTint="@color/teal_200"
+            app:hintEnabled="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintWidth_percent="0.7">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/cairo_bold"
+                android:hint="@string/name"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="15"
+                android:nextFocusDown="@+id/edt_phone"
+                android:paddingStart="@dimen/dimen_16dp"
+                android:paddingTop="@dimen/dimen_8dp"
+                android:paddingEnd="@dimen/dimen_16dp"
+                android:paddingBottom="@dimen/dimen_8dp"
+                android:singleLine="true"
+                android:text="@{user.name}"
+                android:textAlignment="viewStart"
+                android:textColor="@color/teal_200"
+                android:textColorHint="@color/teal_200"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_layout_phone"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:theme="@style/TextLabel"
+            app:boxCornerRadiusBottomEnd="@dimen/dimen_6dp"
+            app:boxCornerRadiusBottomStart="@dimen/dimen_6dp"
+            app:boxCornerRadiusTopEnd="@dimen/dimen_6dp"
+            app:boxCornerRadiusTopStart="@dimen/dimen_6dp"
+            app:boxStrokeColor="@color/teal_200"
+            app:boxStrokeWidth="@dimen/dimen_1dp"
+            app:boxStrokeWidthFocused="@dimen/dimen_2dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/teal_200"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_layout_name"
+
+            app:layout_constraintWidth_percent="0.7">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/cairo_bold"
+                android:hint="@string/phone_number"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="15"
+                android:nextFocusDown="@+id/edt_address"
+                android:paddingStart="@dimen/dimen_16dp"
+                android:paddingTop="@dimen/dimen_8dp"
+                android:paddingEnd="@dimen/dimen_16dp"
+                android:paddingBottom="@dimen/dimen_8dp"
+                android:singleLine="true"
+                android:text="@{user.phone}"
+                android:textAlignment="viewStart"
+                android:textColor="@color/teal_200"
+                android:textColorHint="@color/teal_200"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_layout_address"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:theme="@style/TextLabel"
+            app:boxCornerRadiusBottomEnd="@dimen/dimen_6dp"
+            app:boxCornerRadiusBottomStart="@dimen/dimen_6dp"
+            app:boxCornerRadiusTopEnd="@dimen/dimen_6dp"
+            app:boxCornerRadiusTopStart="@dimen/dimen_6dp"
+            app:boxStrokeColor="@color/teal_200"
+            app:boxStrokeWidth="@dimen/dimen_1dp"
+            app:boxStrokeWidthFocused="@dimen/dimen_2dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/teal_200"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_layout_phone"
+
+            app:layout_constraintWidth_percent="0.7">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/cairo_bold"
+                android:hint="@string/address"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="15"
+                android:nextFocusDown="@+id/edt_country"
+                android:paddingStart="@dimen/dimen_16dp"
+                android:paddingTop="@dimen/dimen_8dp"
+                android:paddingEnd="@dimen/dimen_16dp"
+                android:paddingBottom="@dimen/dimen_8dp"
+                android:singleLine="true"
+                android:text="@{user.address}"
+                android:textAlignment="viewStart"
+                android:textColor="@color/teal_200"
+                android:textColorHint="@color/teal_200"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_layout_country"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:theme="@style/TextLabel"
+            app:boxCornerRadiusBottomEnd="@dimen/dimen_6dp"
+            app:boxCornerRadiusBottomStart="@dimen/dimen_6dp"
+            app:boxCornerRadiusTopEnd="@dimen/dimen_6dp"
+            app:boxCornerRadiusTopStart="@dimen/dimen_6dp"
+            app:boxStrokeColor="@color/teal_200"
+            app:boxStrokeWidth="@dimen/dimen_1dp"
+            app:boxStrokeWidthFocused="@dimen/dimen_2dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/teal_200"
+            app:hintEnabled="false"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/txt_layout_address"
+            app:layout_constraintTop_toBottomOf="@+id/txt_layout_address"
+            app:layout_constraintWidth_percent="0.3">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_country"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/cairo_bold"
+                android:hint="@string/country"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="15"
+                android:nextFocusDown="@+id/edt_city"
+                android:paddingStart="@dimen/dimen_16dp"
+                android:paddingTop="@dimen/dimen_8dp"
+                android:paddingEnd="@dimen/dimen_16dp"
+                android:paddingBottom="@dimen/dimen_8dp"
+                android:singleLine="true"
+                android:text="@{user.country}"
+                android:textAlignment="viewStart"
+                android:textColor="@color/teal_200"
+                android:textColorHint="@color/teal_200"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_layout_city"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:theme="@style/TextLabel"
+            app:boxCornerRadiusBottomEnd="@dimen/dimen_6dp"
+            app:boxCornerRadiusBottomStart="@dimen/dimen_6dp"
+            app:boxCornerRadiusTopEnd="@dimen/dimen_6dp"
+            app:boxCornerRadiusTopStart="@dimen/dimen_6dp"
+            app:boxStrokeColor="@color/teal_200"
+            app:boxStrokeWidth="@dimen/dimen_1dp"
+            app:boxStrokeWidthFocused="@dimen/dimen_2dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/teal_200"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="@id/txt_layout_address"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@+id/txt_layout_address"
+            app:layout_constraintWidth_percent="0.3">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_city"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/cairo_bold"
+                android:hint="@string/city"
+                android:imeOptions="actionGo"
+                android:inputType="text"
+                android:maxLength="15"
+                android:nextFocusDown="@+id/edt_password"
+                android:paddingStart="@dimen/dimen_16dp"
+                android:paddingTop="@dimen/dimen_8dp"
+                android:paddingEnd="@dimen/dimen_16dp"
+                android:paddingBottom="@dimen/dimen_8dp"
+                android:singleLine="true"
+                android:text="@{user.city}"
+                android:textAlignment="viewStart"
+                android:textColor="@color/teal_200"
+                android:textColorHint="@color/teal_200"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_layout_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:theme="@style/TextLabel"
+            app:boxCornerRadiusBottomEnd="@dimen/dimen_6dp"
+            app:boxCornerRadiusBottomStart="@dimen/dimen_6dp"
+            app:boxCornerRadiusTopEnd="@dimen/dimen_6dp"
+            app:boxCornerRadiusTopStart="@dimen/dimen_6dp"
+            app:boxStrokeColor="@color/teal_200"
+            app:boxStrokeWidth="@dimen/dimen_1dp"
+            app:boxStrokeWidthFocused="@dimen/dimen_2dp"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/teal_200"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_layout_city"
+            app:layout_constraintWidth_percent="0.7">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/cairo_bold"
+                android:hint="@string/password"
+                android:imeOptions="actionGo"
+                android:inputType="textPassword"
+                android:maxLength="15"
+                android:nextFocusDown="@+id/edt_email"
+                android:paddingStart="@dimen/dimen_16dp"
+                android:paddingTop="@dimen/dimen_8dp"
+                android:paddingEnd="@dimen/dimen_16dp"
+                android:paddingBottom="@dimen/dimen_8dp"
+                android:singleLine="true"
+                android:text="@{user.password}"
+                android:textAlignment="viewStart"
+                android:textColor="@color/teal_200"
+                android:textColorHint="@color/teal_200"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioGroup
+            android:id="@+id/radioGender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_layout_password"
+            app:layout_constraintWidth_percent="0.7">
+
+            <RadioButton
+                android:id="@+id/rbMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/teal_200"
+                android:checked="@{user.genderId == 0}"
+                android:fontFamily="@font/cairo_bold"
+                android:text="@string/male" />
+
+            <RadioButton
+                android:id="@+id/rbFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="@{user.genderId == 1}"
+                android:fontFamily="@font/cairo_bold"
+                android:textColor="@color/teal_200"
+                android:layout_marginStart="16dp"
+                android:text="@string/female" />
+
+        </RadioGroup>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchAdmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/admin"
+            android:textColor="@color/teal_200"
+            android:checked="@{user.admin}"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:fontFamily="@font/cairo_bold"
+            app:layout_constraintStart_toStartOf="@id/radioGender"
+            app:layout_constraintTop_toBottomOf="@id/radioGender" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_logout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/teal_200"
+            android:fontFamily="@font/cairo_bold"
+            android:text="@string/logout"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:cornerRadius="@dimen/dimen_20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_edit"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/teal_200"
+            android:fontFamily="@font/cairo_bold"
+            android:text="@string/edit"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:cornerRadius="@dimen/dimen_20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/switchAdmin"
+            app:layout_constraintWidth_percent="0.5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

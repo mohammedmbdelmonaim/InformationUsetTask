@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">برنامج معلومات العميل</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">الأيميل</string>
+    <string name="prompt_password">الرقم السري</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="phone_number">أدخل رقم التليفون</string>
+    <string name="password">أدخل الرقم السري</string>
+    <string name="register">إنشاء حساب</string>
+    <string name="login">تسجيل دخول</string>
+    <string name="name">الاسم</string>
+    <string name="country">الدولة</string>
+    <string name="city">المدينة</string>
+    <string name="female">أنثي</string>
+    <string name="male">ذكر</string>
+    <string name="admin">مشرف</string>
+    <string name="en">إنجليزي</string>
+    <string name="ar">عربي</string>
+    <string name="address">العنوان</string>
+    <string name="edit">تعديل الملف</string>
+    <string name="logout">خروج</string>
+    <string name="my_profile">ملفي الشخصي</string>
+    <string name="edit_success">تم تعديل المستخدم بنجاح</string>
+    <string name="please_name">من فضلك ادخل الاسم</string>
+    <string name="at_least_3_chars">يجب الا يقل عن 3 احرف</string>
+    <string name="please_phone">من فضلك ادخل رقم التليفون</string>
+    <string name="valid_phone">من فضلك ادخل رقم تليفون صحيح</string>
+    <string name="enter_pass">من فضلك ادخل الرقم السري</string>
+    <string name="enter_country">من فضلك ادخل الدولة</string>
+    <string name="nter_city">من فضلك ادخل المدينة</string>
+    <string name="enter_address">من فضلك ادخل العنوان</string>
+    <string name="at_least_6_chars">يجب الا يقل عن 6 احرف</string>
+    <string name="choose_gender">من فضلك أختر النوع</string>
+    <string name="hello">مرحبا</string>
+    <string name="added_success">تم إضافه المستخدم بنجاح</string>
+    <string name="verify_data">من فضلك تأكد من البيانات المدخلة</string>
+    <string name="phone">رقم التليفون</string>
+    <string name="gender">النوع</string>
+    <string name="yes">نعم</string>
+    <string name="no">لا</string>
+    <string name="users">المستخدمين</string>
+    <string name="delete_user">تم حذف المستخدم من قبل الادمن</string>
+</resources>
